@@ -59,8 +59,14 @@ input:not(:placeholder-shown):invalid {
 }
 
 
-select:focus:invalid,
-input[type="datetime-local"]:focus:invalid {
+input[type="datetime-local"]:invalid,
+select:invalid {
+    border: 1px solid #ccc;
+}
+
+
+input[type="datetime-local"]:focus:invalid,
+select:focus:invalid {
     border: 2px solid red;
 }
 
