@@ -1,0 +1,107 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+}
+
+
+fieldset {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.grid-row {
+    display: contents;
+}
+
+
+label {
+    text-align: right;
+    padding-right: 10px;
+}
+
+
+.flex-row {
+    display: flex;
+    gap: 15px;
+}
+
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    padding-left: 150px;
+}
+
+
+input:valid,
+select:valid {
+    border: 2px solid green;
+}
+
+
+input:not(:placeholder-shown):invalid {
+    border: 2px solid red;
+}
+
+
+select:focus:invalid,
+input[type="datetime-local"]:focus:invalid {
+    border: 2px solid red;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+
+    fieldset {
+        grid-template-columns: 1fr;
+    }
+
+
+    label {
+        text-align: left;
+    }
+
+    .button-row {
+        padding-left: 0;
+    }
+}
